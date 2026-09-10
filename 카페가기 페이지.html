@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        *{padding:0;margin:0}
+         li{list-style:none}
+         a{text-decoration:none;font-size:22px}
+         #k{position:fixed; left:0 ;top:0 ;background-color: black; z-index: 100;}
+         #ad{font-size:22px;}
+         .menu {position:fixed; width: 70%; overflow: hidden; margin-left: 15%; float:left; z-index: 100;}
+         .menu > li {width: 25%; float: left; text-align: center; line-height: 125px;background-color: black; z-index: 100;}
+         .menu a {color: #fff; z-index: 100;}
+         .submenu > li {line-height: 50px; background-color: gray; z-index: 100;}
+         .submenu {height: 0; overflow: hidden; z-index: 100;}
+         .menu > li:hover { background-color: gray; transition-duration: 0.5s; z-index: 100;}
+         .menu > li:hover .submenu {height: 275px; transition-duration: 1s; z-index: 100;}
+         .menu7 {position:fixed; margin-left:85%; width:15%; overflow: hidden; float: right;z-index: 100;}
+         .menu7 > li {width: 100%; text-align: center; line-height: 125px;background-color: black; z-index: 100;}
+         .menu7 a {color: #fff; z-index: 100;}
+         .submenu7 > li {line-height: 50px; background-color: gray;z-index: 100;}
+         .submenu7 {height: 0; overflow: hidden; z-index: 100;}
+         .menu7 > li:hover { background-color: gray; transition-duration: 0.5s;z-index: 100;}
+         .menu7 > li:hover .submenu7 {height: 125px; transition-duration: 1s;z-index: 100;}
+         #red{color: red}
+            body{background-color: black;}
+            #men {position: absolute; top:400px; left: 10%;z-index: 0;}
+            #rice {position: absolute; top:400px; left: 30.9%;z-index: 0;}
+            #desert {position: absolute; top:400px; right: 30.9%; z-index: 0;}
+            #yaki {position: absolute; top:400px; right:10%; z-index: 0;}
+            #eat-text {
+            position: absolute;
+            top:210px;
+            left:10%;
+            right: 10%;
+            font-size:57px;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+          .jb-c {
+          position: absolute;
+          top: 0px;
+          left: 0PX;
+          display: none;
+          transform:scale(1.05); 
+          z-index: 0;}
+          .jb-a:hover .jb-c {
+           display: block;}
+        </style>
+    </head>
+        <body>
+          <a href="인트로 완성작.html"><img src="eatflix 로고.png" id="k" width=15% height="128px"></a>
+          <ul class="menu">
+            <li>
+              <a href="미소라멘 페이지.html">면</a>
+              <ul class="submenu">
+                <li><a href="미소라멘 페이지.html">미소라멘</a></li>
+                <li><a href="소바 페이지.html">소바</a></li>
+                <li><a href="나폴리탄스파게티 페이지.html">나폴리탄 스파게티</a></li>
+                <li><a href="우동 페이지.html">우동</a></li>
+                <li><a href="https://goo.gl/maps/9t2mWiwTFoUeXpBa9" target="_blank">면 지도</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="오므라이스 페이지.html">밥</a>
+              <ul class="submenu">
+                <li><a href="오므라이스 페이지.html">오므라이스</a></li>
+                <li><a href="도시락 페이지.html">도시락</a></li>
+                <li><a href="오니기리 페이지.html">오니기리</a></li>
+                <li><a href="오차즈케 페이지.html">오차즈케</a></li>
+                <li><a href="https://goo.gl/maps/y6858YyUfFWHHtM38" target="_blank">밥 지도</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="파르페 페이지.html">디저트</a>
+              <ul class="submenu">
+                <li><a href="파르페 페이지.html">파르페</a></li>
+                <li><a href="오하기 페이지.html">오하기</a></li>
+                <li><a href="도라야키 페이지.html">도라야키</a></li>
+                <li><a href="커피젤리 페이지.html">커피젤리</a></li>
+                <li><a href="https://goo.gl/maps/NbncNmm64Jd2A6ih8" target="_blank">디저트 지도</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="스키야키 페이지.html">야키</a>
+              <ul class="submenu">
+                <li><a href="스키야키 페이지.html">스키야키</a></li>
+                <li><a href="야끼소바 페이지.html">야키소바</a></li>
+                <li><a href="오코노미야끼 페이지.html">오코노미야키</a></li>
+                <li><a href="타코야키 페이지.html">타코야키</a></li>
+                <li><a href="https://goo.gl/maps/haqTjnrMtMdp99Li7" target="_blank">야키 지도</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="menu7">
+            <li>
+              <a id="red">부가 서비스</a>
+              <ul class="submenu7">
+                <li><a href="https://goo.gl/maps/NfckXQ4VueJVcTSH6" target="_blank" id="ad">전체 맛집 지도</a></li>
+                <li><a href="카페가기 페이지.html" id="ad">커뮤니티 방문</a></li>
+              </ul>
+            </li>
+            </ul>
+            <p id="eat-text">EATFLIX카페에서 콘텐츠를 추가할 음식을 선택하세요</p>
+            <div class="jb-a">
+            <a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30988974&search.menuid=6&search.boardtype=L" target="_blank"><p id="men"> <img src="001.png" width="300px" height="300px" class="jb-b" ><img src="0011.png" width="300px" height="300px" class="jb-c" ></a>
+            </div>
+            </p>
+            <div class="jb-a">
+            <a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30988974&search.menuid=7&search.boardtype=L" target="_blank"><p id="rice"> <img src="002.png" width="300" height="300"class="jb-b"><img src="0022.png" width="300px" height="300px" class="jb-c" ></a>
+            </p>
+            </div>
+            <div class="jb-a">
+            <a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30988974&search.menuid=9&search.boardtype=L" target="_blank"><p id="desert"> <img src="003.png" width="300" height="300"class="jb-b"><img src="0033.png" width="300px" height="300px" class="jb-c" ></a>
+            </p>
+            </div>
+            <div class="jb-a">
+            <a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30988974&search.menuid=8&search.boardtype=L" target="_blank"><p id="yaki"> <img src="004.png" width="300" height="300"class="jb-b"><img src="0044.png" width="300px" height="300px" class="jb-c" ></a>
+            </p>
+            </div>
+          </body>

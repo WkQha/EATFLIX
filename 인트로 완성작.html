@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EATFLIX</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+
+        #logo>img {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 222px;
+            height: 85px;
+        }
+            *{padding:0;margin:0}
+            li{list-style:none}
+            a{text-decoration:none;font-size:40px}
+            #ad{font-size:30px;}
+            body{background-color: black;}
+            #men {position: absolute; top:420px; left: 10%; z-index: 0;}
+            #rice {position: absolute; top:420px; left: 32%; z-index: 0;}
+            #desert {position: absolute; top:420px; right: 32%; z-index: 0;}
+            #yaki {position: absolute; top:420px; right:10%; z-index: 0;}
+            #eat-text {
+            position: absolute;
+            top:210px;
+            left:10%;
+            right: 10%;
+            font-size:70px;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+          .jb-c {
+          position: absolute;
+          top: 0px;
+          left: 0PX;
+          display: none;
+          transform:scale(1.05); 
+          z-index: 0;}
+          .jb-a:hover .jb-c {
+           display: block;}
+        main {
+            text-align: center;
+        }
+
+
+        #면{position: absolute; top:670px; left: 15%; font-size: 55px;}
+        #밥{position: absolute; top:670px; left: 37%; font-size: 55px;}
+        #디저트{position: absolute; top:670px; right: 34%; font-size: 55px;}
+        #야키{position: absolute; top:670px; right: 14%; font-size: 55px;}
+        /* #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #page-content {
+            display: none;
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="video-background">
+        <video autoplay muted onended="showPageContent()">
+            <source src="eatflix.mkv" type="video/mp4">
+        </video>
+    </div>
+    <!-- <div id="video-background">
+        <video autoplay loop muted>
+            <source src="eatflix.mp4" type="video/mp4">
+        </video>
+    </div> -->
+    <div id="page-content">
+
+
+        <a href="인트로 완성작.html"><div id="logo"><img src="eatflixlogo.png"></div></a>
+        <main>
+            <p id="eat-text"><B>EATFLIX</B>에서 시청할 음식을 선택하세요</p>
+            <div class="jb-a">
+            <a href="미소라멘 페이지.html"><p id="men"> <img src="ㄱ.png" width="250px" height="250px" class="jb-b" ><img src="ㄴ.png"  width="250px" height="250px" class="jb-c" ></a>
+            </div>
+            <div id="면">면</div>
+            </p>
+            <div class="jb-a">
+            <a href="오므라이스 페이지.html"><p id="rice"> <img src="ㅅ.png" width="250px" height="250px" class="jb-b"><img src="ㅇ.png"  width="250px" height="250px" class="jb-c" ></a>
+            </p>
+            <div id="밥">밥</div>
+            </div>
+            <div class="jb-a">
+            <a href="파르페 페이지.html"><p id="desert"> <img src="ㅁ.png" width="250px" height="250px" class="jb-b"><img src="ㅂ.png"  width="250px" height="250px" class="jb-c" ></a>
+            </p>
+            <div id="디저트">디저트</div>
+            </div>
+            <div class="jb-a">
+            <a href="스키야키 페이지.html"><p id="yaki"> <img src="ㄷ.png" width="250px" height="250px" class="jb-b"><img src="ㄹ.png"  width="250px" height="250px" class="jb-c" ></a>
+            </p>
+            <div id="야키">야키</div>
+            </div>
+            <div class="jb-a">
+        </div>
+            </div>
+        </main>
+
+        <div id="image-preview"></div>
+    </div>
+
+    <script>
+        function showImagePreview(event) {
+            var element = event.target;
+            var imageSource = element.getAttribute('src');
+            var imagePreview = document.getElementById('image-preview');
+            imageSource = imageSource.replace(imageSource[6], Number(imageSource[6]) + 1);
+            console.log(imageSource);
+            imagePreview.innerHTML = '<img src="' + imageSource + '">';
+            imagePreview.style.display = 'block';
+        }
+
+        function hideImagePreview() {
+            var imagePreview = document.getElementById('image-preview');
+            imagePreview.style.display = 'none';
+        }
+
+        function showPageContent() {
+            document.getElementById('video-background').style.display = "none"
+            document.getElementById("page-content").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
